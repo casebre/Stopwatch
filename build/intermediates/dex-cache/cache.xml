@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/rafael/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-327725086056734a444b2c748d8884d984dd7626.jar" />
+    </item>
+    <item
+        jar="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-c116736f951fdae7cd02f9fc7ac57eefde5accb1.jar" />
+    </item>
+    <item
+        jar="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/pre-dexed/debug/classes-3067b4208f0afd3ff2a182109391fb10a9a2e364.jar" />
+    </item>
+    <item
+        jar="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/pre-dexed/debug/classes-2b9415d0191cc8b09332f3919ea20830b40153d4.jar" />
+    </item>
+    <item
+        jar="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/pre-dexed/debug/classes-e60d084b0fe491729878b5ea2da27880beddf86b.jar" />
+    </item>
+    <item
+        jar="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/home/rafael/AndroidStudioProjects/CasebreStopwatch/app/build/intermediates/pre-dexed/debug/classes-debdf678815d504d7b402d4c922c0ef6946ec9a1.jar" />
+    </item>
+
+</items>
