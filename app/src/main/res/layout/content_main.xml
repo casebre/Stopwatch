@@ -49,17 +49,42 @@
         android:enabled="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="60dp"
-        android:format="00:00" />
+        android:textSize="60dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewChrono"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:text="00"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stopwatch"
+        android:id="@+id/textViewStopWatch"
+        android:layout_above="@+id/textViewChrono"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarStop"
+        android:layout_marginTop="19dp"
+        android:max="100"
+        android:layout_below="@+id/textViewChrono"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/buttonCount"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/seekBarStop"
+        android:layout_centerHorizontal="true"
+        android:onClick="startCount" />
 
 </RelativeLayout>

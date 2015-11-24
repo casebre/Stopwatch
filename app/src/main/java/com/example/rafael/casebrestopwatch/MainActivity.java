@@ -1,6 +1,7 @@
 package com.example.rafael.casebrestopwatch;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,10 +12,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Chronometer;
 import android.os.Handler;
+import android.widget.SeekBar;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    SeekBar timerControl;
+    CountDownTimer countDownTimer;
 
     // Start the timer
     public void clickStart(View view) {
@@ -26,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
     public void clickPause(View view){
         Chronometer chrono = (Chronometer) findViewById(R.id.chronoTimer);
         chrono.stop();
+    }
+
+    public void startCount(View view){
+        //SeekBar seekBarCounter = (SeekBar) findViewById(R.id.seekBarStop);
+
+        countDownTimer = new CountDownTimer(timerControl.getProgress() * 1000, 1000) {
+
+            public void onTick(long miliseconds){
+                TextView chrono = (TextView) findViewById(R.id.textViewChrono);
+                chrono.setText(String.valueOf(miliseconds/1000));
+            }
+
+            public void onFinish(){
+
+            }
+        }.start();
+
     }
 
     @Override
@@ -44,7 +68,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Integer[] time = {0};
+        final TextView textViewChrono = (TextView) findViewById(R.id.textViewChrono);
+        timerControl = (SeekBar) findViewById(R.id.seekBarStop);
+        timerControl.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                setProgress(progress);
+
+                textViewChrono.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                if(countDownTimer != null)
+                    countDownTimer.cancel();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+
+
+
+
+        /*final Integer[] time = {0};
 
         // Allows code to be ran in delayed way. Controls the timming of events/codes.
         final Handler handler = new Handler();
@@ -54,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                /* Code to be run every time (I am not sure yet, but I believe it should
-                 follow some hardware tick
-                  */
+                // Code to be run every time (I am not sure yet, but I believe it should
+                 //follow some hardware tick
+
                 time[0]++;
                 textViewCrono.setText(Integer.toString(time[0]));
                 handler.postDelayed(this, 1000); // in this case, 1 second.
@@ -65,7 +116,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         // initializing runnable
-        handler.post(run);
+        handler.post(run);*/
+
     }
 
     @Override
